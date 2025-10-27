@@ -1,4 +1,3 @@
-// Matrix rain effect
 const matrix = document.getElementById('matrix');
 const chars = "01010101010101010101010101010101010101010101010101";
 
@@ -14,7 +13,6 @@ function createMatrixRain() {
         span.remove();
     }, 15000);
 }
-
 for (let i = 0; i < 50; i++) {
     setTimeout(createMatrixRain, i * 200);
 }
@@ -23,10 +21,8 @@ setInterval(createMatrixRain, 150);
 const passwordInput = document.getElementById('password');
 const confirmBtn = document.getElementById('confirm');
 const message = document.getElementById('message');
-
 const correctPassword = "Cicada3301";
-
-const cvFile = "https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_Islem_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=oujrktk6&dl=1";
+const cvFile = "https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_IsLEM_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=id8k0xf4&dl=1";
 
 confirmBtn.addEventListener('click', validatePassword);
 passwordInput.addEventListener('keypress', function(e) {
@@ -41,10 +37,17 @@ function validatePassword() {
     if (enteredPassword === correctPassword) {
         message.textContent = "ACCESS GRANTED. DOWNLOADING FILE...";
         message.style.color = "#00ff00";
-        
         const link = document.createElement('a');
-        link.href = cvFile;
-        link.download = 'https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_Islem_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=oujrktk6&dl=1';
+        let downloadUrl = cvFile;
+        
+        if (downloadUrl.includes('dropbox.com')) {
+            downloadUrl = downloadUrl.replace('www.dropbox.com', 'dl.dropboxusercontent.com');
+            downloadUrl = downloadUrl.replace('&dl=1', '');
+        }
+        
+        link.href = downloadUrl;
+        link.target = '_blank'; // Open in new tab as fallback
+        link.download = 'Abidi_Mohamed_Dhia_Al_Islem_Professional_CV.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -67,8 +70,4 @@ function validatePassword() {
             message.textContent = "";
         }, 3000);
     }
-
 }
-
-
-
