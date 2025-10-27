@@ -46,7 +46,7 @@ function validatePassword() {
         }
         
         link.href = downloadUrl;
-        link.target = '_blank'; // Open in new tab as fallback
+        link.target = '_blank';
         link.download = 'Abidi_Mohamed_Dhia_Al_Islem_Professional_CV.pdf';
         document.body.appendChild(link);
         link.click();
