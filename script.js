@@ -30,7 +30,7 @@ const message = document.getElementById('message');
 const correctPassword = "Cicada3301";
 
 // CV file (replace with your actual CV file)
-const cvFile = "https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_Islem_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=kncskgvb&dl=1";
+const cvFile = "https://drive.google.com/file/d/18z2sBQVViRR4E_PUfuAcBNEKAvV6H_an/view?usp=sharing";
 
 confirmBtn.addEventListener('click', validatePassword);
 passwordInput.addEventListener('keypress', function(e) {
@@ -78,3 +78,4 @@ function validatePassword() {
     }
 
 }
+
