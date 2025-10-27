@@ -49,7 +49,7 @@ function validatePassword() {
         // Create a temporary link to download the CV
         const link = document.createElement('a');
         link.href = cvFile;
-        link.download = 'professional_cv.pdf';
+        link.download = 'https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_Islem_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=oujrktk6&dl=1';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -78,4 +78,5 @@ function validatePassword() {
     }
 
 }
+
 
