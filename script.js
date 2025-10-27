@@ -22,7 +22,7 @@ const passwordInput = document.getElementById('password');
 const confirmBtn = document.getElementById('confirm');
 const message = document.getElementById('message');
 const correctPassword = "Cicada3301";
-const cvFile = "https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_IsLEM_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=id8k0xf4&dl=1";
+const cvFile = "https://www.dropbox.com/scl/fi/xcu5kep8filqm10z0z5lh/Abidi_Mohamed_Dhia_Al_Islem_CV_Professionnel.pdf?rlkey=xf6ew5bnouosg1z8k5u36n15y&st=a92nfdh4&dl=0";
 
 confirmBtn.addEventListener('click', validatePassword);
 passwordInput.addEventListener('keypress', function(e) {
@@ -71,3 +71,4 @@ function validatePassword() {
         }, 3000);
     }
 }
+
